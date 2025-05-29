@@ -1,0 +1,25 @@
+<svg
+  width="64"
+  height="64"
+  viewBox="0 0 64 64"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <!-- Background using brand blue -->
+  <rect width="64" height="64" rx="12" fill="#07b4e5"/>
+
+  <!-- Medical cross -->
+  <path
+    d="M32 16C31.4477 16 31 16.4477 31 17V25H23C22.4477 25 22 25.4477 22 26V30C22 30.5523 22.4477 31 23 31H31V39C31 39.5523 31.4477 40 32 40H36C36.5523 40 37 39.5523 37 39V31H45C45.5523 31 46 30.5523 46 30V26C46 25.4477 45.5523 25 45 25H37V17C37 16.4477 36.5523 16 36 16H32Z"
+    fill="white"
+  />
+
+  <!-- Checkmark using hover green -->
+  <path
+    d="M22 46L28 52L42 38"
+    stroke="#98d700"
+    stroke-width="4"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+</svg>

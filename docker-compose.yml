@@ -1,0 +1,30 @@
+services:
+  backend:
+    build:
+      context: ./med-enroll-backend
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    environment:
+      - PORT=${PORT}
+      - MONGO_URI=${MONGO_URI}
+      - JWT_SECRET=${JWT_SECRET}
+      - ADMIN_KEY=${ADMIN_KEY}
+    depends_on:
+      - mongo
+
+  frontend:
+    build:
+      context: ./med-enroll-frontend
+      dockerfile: Dockerfile
+    ports:
+      - "80:80"
+
+  mongo:
+    image: mongo:6.0
+    restart: always
+    volumes:
+      - mongo-data:/data/db
+
+volumes:
+  mongo-data:
