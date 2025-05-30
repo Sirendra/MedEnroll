@@ -50,6 +50,14 @@ To run the tests from the project root directory:
       cd med-enroll-backed/ && npm run test
 ```
 
+Unit tests for the frontend are written using Vitest, with near 100% coverage.
+
+To run the tests from the project root directory:
+
+```bash
+      cd med-enroll-frontend/ && npm run test
+```
+
 ## Usage
 
 The system allows administrators to register new customers by providing their first and last names.
