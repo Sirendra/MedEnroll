@@ -127,10 +127,14 @@ const CustomerForm = ({ customer = null, onSuccess = () => {} }) => {
       className="space-y-6 p-6 bg-white shadow-md rounded-md max-w-md mx-auto"
     >
       <div>
-        <label className="block text-sm font-medium text-gray-700 mb-1">
+        <label
+          htmlFor="firstName"
+          className="block text-sm font-medium text-gray-700 mb-1"
+        >
           First Name
         </label>
         <input
+          id="firstName"
           {...register("firstName")}
           className="w-full border border-gray-300 rounded px-4 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[var(--color-brand)]"
         />
@@ -142,10 +146,14 @@ const CustomerForm = ({ customer = null, onSuccess = () => {} }) => {
       </div>
 
       <div>
-        <label className="block text-sm font-medium text-gray-700 mb-1">
+        <label
+          htmlFor="lastName"
+          className="block text-sm font-medium text-gray-700 mb-1"
+        >
           Last Name
         </label>
         <input
+          id="lastName"
           {...register("lastName")}
           className="w-full border border-gray-300 rounded px-4 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[var(--color-brand)]"
         />
