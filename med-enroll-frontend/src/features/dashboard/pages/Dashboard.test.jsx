@@ -4,7 +4,6 @@ import Dashboard from "./Dashboard";
 import * as dashboardService from "../services/dashboardService";
 import * as authContext from "../../../contexts/authContext";
 
-// Mock RecentActivityList component
 vi.mock("../components/RecentActivityList", () => {
   return {
     default: ({ activities }) => (
@@ -45,10 +44,8 @@ describe("Dashboard", () => {
 
     render(<Dashboard />);
 
-    // Initially loading
     expect(screen.getByText(/loading/i)).toBeInTheDocument();
 
-    // Wait for recent activities to appear
     await waitFor(() => {
       expect(screen.queryByText(/loading/i)).not.toBeInTheDocument();
     });
@@ -73,7 +70,7 @@ describe("Dashboard", () => {
   it("performs search and shows results", async () => {
     const searchResults = [{ id: "100", name: "Search Result 1" }];
     vi.spyOn(dashboardService, "getRecentActivities").mockResolvedValue({
-      data: { data: [] }, // recent activities empty
+      data: { data: [] },
     });
     vi.spyOn(dashboardService, "searchByName").mockResolvedValue({
       data: { data: searchResults },
@@ -94,7 +91,6 @@ describe("Dashboard", () => {
       });
     });
 
-    // Recent activity should be hidden while searching
     expect(screen.queryByText(/recent activity/i)).not.toBeInTheDocument();
   });
 

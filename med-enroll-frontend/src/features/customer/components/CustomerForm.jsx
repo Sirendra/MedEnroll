@@ -33,7 +33,6 @@ const CustomerForm = ({ customer = null, onSuccess = () => {} }) => {
   const [firstName = "", lastName = ""] =
     useWatch({ control, name: ["firstName", "lastName"] }) || [];
 
-  // Refill form if editing customer changes
   useEffect(() => {
     if (customer) {
       reset({

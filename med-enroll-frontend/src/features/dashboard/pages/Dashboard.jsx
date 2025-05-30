@@ -14,7 +14,6 @@ const Dashboard = () => {
   const [loadingRecent, setLoadingRecent] = useState(true);
   const [loadingSearch, setLoadingSearch] = useState(false);
 
-  // Load recent activities on mount
   useEffect(() => {
     const fetchActivities = async () => {
       try {
@@ -29,7 +28,6 @@ const Dashboard = () => {
     fetchActivities();
   }, []);
 
-  // Debounced search effect
   useEffect(() => {
     if (!searchTerm) {
       setSearchResults([]);

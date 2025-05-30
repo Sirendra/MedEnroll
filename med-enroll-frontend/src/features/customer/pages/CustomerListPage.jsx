@@ -35,7 +35,7 @@ const CustomerListPage = () => {
       );
       setFilteredCustomers(filtered);
     }
-    setCurrentPage(1); // reset to first page on new search
+    setCurrentPage(1);
   }, [searchTerm, customers]);
 
   const onEditClicked = (id) => {

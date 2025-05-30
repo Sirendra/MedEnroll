@@ -2,15 +2,13 @@ import { render, screen, waitFor } from "@testing-library/react";
 import { useContext } from "react";
 import { MemoryRouter, useLocation } from "react-router-dom";
 import { vi, describe, it, expect, beforeEach } from "vitest";
-import AuthProvider, { authContext } from "./authContext"; // Adjust path if needed
+import { authContext } from "./authContext";
 import { AuthProvider as Provider } from "./AuthProvider";
 
-// Mock jwt-decode
 vi.mock("jwt-decode", () => ({
   default: vi.fn(),
 }));
 
-// Mock react-router-dom hooks
 const mockNavigate = vi.fn();
 const mockLocation = { pathname: "/" };
 

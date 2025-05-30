@@ -4,7 +4,6 @@ import { render, screen } from "@testing-library/react";
 import { MemoryRouter } from "react-router-dom";
 import AppRoutes from "./AppRoutes";
 
-// Mock the route components
 vi.mock("../../features/customer/pages/CustomerPage", () => ({
   default: () => <div>CustomerPage</div>,
 }));

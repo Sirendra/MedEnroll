@@ -13,6 +13,24 @@ MedEnroll is a customer registration system designed for internal administrators
 
 ---
 
+## Libraries
+
+Tailwind CSS – For utility-first styling and responsive UI/UX.
+
+Fuse.js – For fuzzy searching/filtering of data.
+
+JWT (JSON Web Token) – For stateless authentication and authorization.
+
+Zod – For schema-based validation of data (especially useful with TypeScript).
+
+Axios – For making HTTP API calls from the frontend or backend.
+
+Jest – For unit testing backend logic.
+
+Vitest – For fast and lightweight unit testing in frontend (especially with Vite).
+
+Mongoose – For object modeling and interacting with MongoDB.
+
 ## Prerequisites
 
 Before running the project, make sure to create a `.env` file for the backend service containing the following environment variables:
@@ -68,12 +86,9 @@ Administrators can view recently added customers and manage records via the dash
 
 ## Project Structure
 
-### med-enroll-backend/ - Backend Node.js application
-
-### med-enroll-frontend/ - Frontend React application
+med-enroll-backend/ - Backend Node.js application
+med-enroll-frontend/ - Frontend React application
 
 ## Notes
-
-There are currently no automated tests included.
 
 Ensure environment variables are set correctly before starting services.

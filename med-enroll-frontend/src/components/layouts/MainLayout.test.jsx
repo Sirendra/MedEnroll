@@ -3,7 +3,6 @@ import { describe, it, expect, vi } from "vitest";
 import { render, screen } from "@testing-library/react";
 import MainLayout from "./MainLayout";
 
-// Mock the Navbar component to isolate layout testing
 vi.mock("./Navbar", () => ({
   default: () => <nav>Mock Navbar</nav>,
 }));

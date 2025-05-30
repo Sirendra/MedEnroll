@@ -17,7 +17,6 @@ export const AuthProvider = ({ children }) => {
       setIsAuthenticated(true);
       try {
         const decoded = jwtDecode(token);
-        // Assuming your token payload has userId and fullName:
         const userData = {
           userId: decoded.userId,
           fullName: decoded.fullName,

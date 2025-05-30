@@ -7,7 +7,7 @@ function Navbar() {
   const { isAuthenticated, logout } = useAuth();
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const debounceTimeout = useRef(null);
-  const fullName = "John Doe"; // Replace this with actual user name
+  const fullName = "John Doe";
   const imageUrl = `https://robohash.org/${encodeURIComponent(
     fullName
   )}?size=150x150`;

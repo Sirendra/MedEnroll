@@ -41,16 +41,13 @@ describe("CustomerForm", () => {
     const lastNameInput = screen.getByLabelText(/last name/i);
     const submitButton = screen.getByRole("button", { name: /register/i });
 
-    // Type into inputs and wait for form state update
     await userEvent.clear(firstNameInput);
     await userEvent.type(firstNameInput, "John");
     await userEvent.clear(lastNameInput);
     await userEvent.type(lastNameInput, "Doe");
 
-    // Submit form
     await userEvent.click(submitButton);
 
-    // Wait for async submit effect
     await waitFor(() => {
       expect(addCustomer).toHaveBeenCalledWith({
         firstName: "John",
@@ -71,7 +68,6 @@ describe("CustomerForm", () => {
 
     const lastNameInput = screen.getByLabelText(/last name/i);
 
-    // Clear and change last name
     await userEvent.clear(lastNameInput);
     await userEvent.type(lastNameInput, "Doe");
 
@@ -101,11 +97,9 @@ describe("CustomerForm", () => {
     const firstNameInput = screen.getByLabelText(/first name/i);
     const lastNameInput = screen.getByLabelText(/last name/i);
 
-    // Type first and last name
     await userEvent.type(firstNameInput, "Jo");
     await userEvent.type(lastNameInput, "Do");
 
-    // Wait for debounce + async calls
     await waitFor(() => {
       expect(fetchPossibleCustomers).toHaveBeenCalledWith("Jo", "Do");
       expect(fuzzyMatchCustomers).toHaveBeenCalled();
