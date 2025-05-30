@@ -40,6 +40,16 @@ The backend will fail to start without these variables.
 
 5. The frontend will be available on http://localhost and the backend API on port 3000.
 
+## 🧪 Tests
+
+Unit tests for the backend are written using Jest, with near 100% coverage.
+
+To run the tests from the project root directory:
+
+```bash
+      cd med-enroll-backed/ && npm run test
+```
+
 ## Usage
 
 The system allows administrators to register new customers by providing their first and last names.
