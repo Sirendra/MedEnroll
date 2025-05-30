@@ -1,5 +1,3 @@
-// auth.service.test.ts (or wherever your test is)
-
 import bcrypt from "bcryptjs";
 import jwt from "jsonwebtoken";
 import User from "../../src/models/user.model";
